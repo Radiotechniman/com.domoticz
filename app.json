@@ -1,0 +1,29 @@
+{
+    "id": "com.domoticz",
+    "name": {
+        "en": "Domoticz"
+    },
+    "version": "0.0.1",
+    "compatibility": "0.x",
+    "author": {
+        "name": "Niels van Gelderen",
+        "email": "nielsvangelderen@gmail.com"
+    },
+    "flow": {
+        "triggers": [
+            {
+                "id": "turned_on",
+                "title": {
+                    "en": "Turned on"
+                },
+                "args": [
+                    {
+                        "name": "Domoticz Switch",
+                        "type": "device",
+                        "filter": "driver_id=my_driver"
+                    }
+                ]
+            }
+        ]
+    }
+}

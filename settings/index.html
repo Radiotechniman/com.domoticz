@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <h1>Domoticz Settings</h1>
+        <p>Please add your domoticz details below, please note login/password is not supported (at this time).</p>
+        <fieldset>
+            <legend>Super general settings</legend>
+
+            <div class="field row">
+                <label for="domo_ip">Domoticz IP</label>
+                <input id="domo_ip" type="text" value="" />
+            </div>
+            <div class="field row">
+                <label for="domo_port">Domoticz Port</label>
+                <input id="domo_port" type="text" value="" />
+            </div>
+
+        </fieldset>
+
+        <button class="right" onclick="save()">Save changes</button>
+
+        <script type="text/javascript">
+        function onHomeyReady(){
+            Homey.ready()
+        }
+
+        function save() {
+            Homey.set('domo_ip', document.getElementById('domo_ip').value);
+            Homey.set('domo_port', document.getElementById('domo_port').value);
+	    console.log (domo_ip)  
+
+        }
+        </script>
+
+    </body>
+</html>
